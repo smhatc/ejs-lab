@@ -3,10 +3,10 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Menu</title>
+        <title>Full Menu</title>
 </head>
 <body>
-        <%- include("./partials/nav.ejs")  %>
+        <%- include("./partials/nav.ejs") %>
         <h1>Full Menu</h1>
         <h2>Mains</h2>
         <% menu.forEach((item) => { %>
@@ -18,7 +18,7 @@
                                 <strong>Details:</strong> <%= item.details %>
                         </p>
                 <% } %>
-        <% }) %>
+        <% }); %>
         <h2>Desserts</h2>
         <% menu.forEach((item) => { %>
                 <% if (item.category === "desserts") { %>
@@ -29,7 +29,7 @@
                                 <strong>Details:</strong> <%= item.details %>
                         </p>
                 <% } %>
-        <% }) %>
+        <% }); %>
         <h2>Sides</h2>
         <% menu.forEach((item) => { %>
                 <% if (item.category === "sides") { %>
@@ -40,6 +40,6 @@
                                 <strong>Details:</strong> <%= item.details %>
                         </p>
                 <% } %>
-        <% }) %>
+        <% }); %>
 </body>
 </html>

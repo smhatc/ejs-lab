@@ -16,7 +16,7 @@ const RESTAURANT = {
                         price: 13.00,
                         rating: 4,
                         category: "mains",
-                        details: "A vegetarian burger made with a quinoa and mushroom patty, it will take you to another realm."
+                        details: "A vegetarian burger made with a quinoa and mushroom patty, it will take you to another realm"
                 },
                 {
                         id: 2,
@@ -24,7 +24,7 @@ const RESTAURANT = {
                         price: 10.11,
                         rating: 3,
                         category: "desserts",
-                        details: "A creamy cheesecake bursting with flavor. A mix of berries in every byte."
+                        details: "A creamy cheesecake bursting with flavor. A mix of berries in every byte"
                 },
                 {
                         id: 3,
@@ -32,7 +32,7 @@ const RESTAURANT = {
                         price: 17.00,
                         rating: 5,
                         category: "mains",
-                        details: "A classic rigatoni pasta dish, layered with rich tomato sauce and herbs. You'll keep coming back for more."
+                        details: "A classic rigatoni pasta dish, layered with rich tomato sauce and herbs. You'll keep coming back for more"
                 },
                 {
                         id: 4,
@@ -40,7 +40,7 @@ const RESTAURANT = {
                         price: 3.14,
                         rating: 5,
                         category: "desserts",
-                        details: "A delightful pumpkin dessert, squared and spiced to perfection."
+                        details: "A delightful pumpkin dessert, squared and spiced to perfection"
                 },
                 {
                         id: 5,
@@ -48,7 +48,7 @@ const RESTAURANT = {
                         price: 11.23,
                         rating: 5,
                         category: "sides",
-                        details: "Crispy and lightly seasoned string bean fries, served in a pattern for a fun twist."
+                        details: "Crispy and lightly seasoned string bean fries, served in a pattern for a fun twist"
                 }
         ]
 };
@@ -70,7 +70,6 @@ app.get("/menu/:category", (req, res) => {
         const category = req.params.category;
         const categoryCap = category.charAt(0).toUpperCase() + category.slice(1);
         const menuItems = RESTAURANT.menu.filter(item => item.category === category);
-
         res.render("category.ejs", {
                 category: categoryCap,
                 menuItems

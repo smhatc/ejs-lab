@@ -8,9 +8,9 @@
 <body>
         <%- include('./partials/nav.ejs') %>
         <h1><%= RESTAURANT.name %></h1>
-        <h2>Restaurant Details:</h2>
+        <h2>Restaurant Details</h2>
         <p><%= RESTAURANT.isOpen ? "We are open!" : "Sorry, we are closed." %></p>
-        <p>Address: <%= RESTAURANT.address %></p>
-        <p>Phone: <%= RESTAURANT.phone %></p>
+        <p><strong>Address:</strong> <%= RESTAURANT.address %></p>
+        <p><strong>Phone:</strong> <%= RESTAURANT.phone %></p>
 </body>
 </html>

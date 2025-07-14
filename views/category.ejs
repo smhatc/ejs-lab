@@ -6,7 +6,7 @@
         <title><%= category %></title>
 </head>
 <body>
-        <%- include("./partials/nav.ejs")  %>
+        <%- include("./partials/nav.ejs") %>
         <h1><%= category %></h1>
         <% menuItems.forEach((item) => { %>
                 <p>
@@ -15,6 +15,6 @@
                         <strong>Rating:</strong> <%= item.rating %><br>
                         <strong>Details:</strong> <%= item.details %>
                 </p>
-        <% }) %>
+        <% }); %>
 </body>
 </html>
