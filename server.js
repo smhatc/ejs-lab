@@ -55,7 +55,26 @@ const RESTAURANT = {
 
 // ROUTES
 app.get("/", (req, res) => {
-        res.send("Hello There!");
+        res.render("home.ejs", {
+                RESTAURANT
+        });
+});
+
+app.get("/menu", (req, res) => {
+        res.render("menu.ejs", {
+                menu: RESTAURANT.menu
+        });
+});
+
+app.get("/menu/:category", (req, res) => {
+        const category = req.params.category;
+        const categoryCap = category.charAt(0).toUpperCase() + category.slice(1);
+        const menuItems = RESTAURANT.menu.filter(item => item.category === category);
+
+        res.render("category.ejs", {
+                category: categoryCap,
+                menuItems
+        });
 });
 
 // STARTING THE SERVER
